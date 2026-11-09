@@ -62,6 +62,12 @@ header{position:absolute;top:0;left:0;width:100%;z-index:4;border:0;background:t
 @media(min-width:701px){#modal.task-card{width:min(660px,82%);right:9%;top:13%;max-height:85%;padding:21px 25px}}
 @media(min-width:701px) and (max-height:650px){#modal.task-card{padding:17px 20px;top:10%;max-height:89%}#modal.task-card #modal-text{font-size:13px;line-height:1.5}#modal.task-card .scratchpad canvas{height:100px}#modal.task-card .answer-row{font-size:12px}#modal.task-card .task-form{gap:7px 12px}}
 @media(max-width:700px){#modal.task-card{padding:20px}#modal.task-card #modal-text{font-size:14px}#gift-item{width:55%;height:160px}}
+
+/* Match overflow controls to the card; gift content shrinks before scrolling. */
+#modal,#reset-confirm{scrollbar-width:thin;scrollbar-color:#cbb477 #17392f;border-radius:22px;overscroll-behavior:contain}#modal::-webkit-scrollbar,#reset-confirm::-webkit-scrollbar{width:6px;height:6px}#modal::-webkit-scrollbar-track,#reset-confirm::-webkit-scrollbar-track{background:#17392f;border-radius:20px;margin:18px 0}#modal::-webkit-scrollbar-thumb,#reset-confirm::-webkit-scrollbar-thumb{background:#cbb477;border-radius:20px;border:1px solid #17392f}#modal::-webkit-scrollbar-thumb:hover{background:#ecd49a}#modal::-webkit-scrollbar-button,#reset-confirm::-webkit-scrollbar-button{display:none;width:0;height:0}#modal:not(.task-card)[open]{gap:12px}#modal:not(.task-card) #gift-item{flex:1 1 160px;min-height:0;max-height:210px;height:clamp(80px,23vh,210px);width:min(240px,50%);object-fit:contain}#modal:not(.task-card) .modal-kicker{flex-shrink:0;margin:0;font-size:11px}#modal:not(.task-card) h2{flex-shrink:0;font-size:clamp(24px,3.2vh,36px);line-height:1.2;margin:0}#modal:not(.task-card) p{flex-shrink:0;font-size:clamp(15px,2vh,20px);line-height:1.55;margin:0}#modal:not(.task-card) .close{flex-shrink:0;margin:4px 0 0;padding:12px 28px;font-size:15px}
+@media(min-width:701px){#modal:not(.task-card){padding:24px 30px}}
+@media(min-width:701px) and (max-height:650px){#modal:not(.task-card){padding:18px 22px}#modal:not(.task-card)[open]{gap:8px}#modal:not(.task-card) h2{font-size:25px}#modal:not(.task-card) p{font-size:15px}#modal:not(.task-card) .close{padding:10px 24px;font-size:14px}}
+@media(max-width:700px){#modal:not(.task-card){padding:22px;max-height:75svh}#modal:not(.task-card)[open]{display:flex;flex-direction:column;align-items:center}#modal:not(.task-card) #gift-item{flex:0 1 150px;max-height:150px}#modal:not(.task-card) h2{font-size:25px}#modal:not(.task-card) p{font-size:15px}}
 </style>
 </head>
 <body>
